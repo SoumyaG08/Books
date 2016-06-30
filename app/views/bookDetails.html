@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Book Details</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+</head>
+<body>
+<div class="container">
+	<div class="navbar">
+		<a href="/books">Home</a>
+		<a href="">Logout</a>
+	</div>
+	<div class="leftSide">
+		<p><h3>{{book['title']}}</h3></p>
+		<p>Author: {{book['author']}}</p>
+		<h3>Reviews</h3>
+		{%for review in reviews%}
+		<hr>
+		<p>Rating: {{review['rating']}}</p>
+		<p>{{review['alias']}} says: {{review['reviews']}} </p>
+		<p> Posted on {{review['date']}} </p>
+		if userid = session userid, show the <a href="">Delete this Review</a>
+		{%endfor%}
+	</div>
+	<div class="rightSide">
+	<form action="" method="" >
+		<label>Add a Review: </label>
+		<p><textarea name="addreview" rows="4" cols="30"></textarea></p>
+		<p><label>Rating: </label>
+		<select name="rating">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3" selected="selected">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+		</select></p>
+		<input type="submit" value="Submit Review">
+		</form>
+	</div>
+</div>
+</body>
+</html>

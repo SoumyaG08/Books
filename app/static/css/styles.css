@@ -1,3 +1,38 @@
 * {
   font-family: monaco;
 }
+.container{
+	margin: 0 auto;
+	background-color: #2F4F4F;
+	color: silver;
+	width: 980px;
+	height: 1000px;
+	text-align: center;
+}
+
+.Right, h2 {
+	display: inline-block;
+}
+.Right {
+	margin-right: 10px;
+	text-align: right;
+}
+.Right{
+	position: relative;
+	left: 100px;
+}
+h2 {
+	position: relative;
+	right: 200px;
+}
+.otherBooks, .review{
+	display: inline-block;
+	vertical-align: top;
+}
+#book{
+	position: relative;
+	right: 200px;
+}
+.otherBooks{
+	margin-left: 100px;
+}

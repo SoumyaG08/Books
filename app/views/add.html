@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add a Book</title>
+	<link rel="stylesheet" type="text/css" href="/static/css/styles.css">
+	<meta charset="UTF-8">
+</head>
+<body>
+<div class="container">
+<div class="navbar">
+<a href="/books">Home</a>
+<a href="">Logout</a>
+</div>
+<form action="/books/process" method="post" onsubmit="return confirm('Are you sure?')">
+	<h3>Add a New Book Title and a Review</h3>
+	<p><label>Book Title: </label> <input type="text" name="title"></p>
+	<p><label>Author: </label></p>
+	<p><label>Choose from the list: </label>
+	<select name="author_d">
+		<option value="Stephen King">Stephen King</option>
+		<option value="Ayn Rand">Ayn Rand</option>
+		<option value="Charles Dickens">Charles Dickens</option>
+	</select></p>
+	<p><label>Or add a new author: </label><input type="text" name="author_w"></p>
+	<p><label>Review: </label><textarea name="review" rows="4" cols="30"></textarea></p>
+	<p><label>Rating: </label>
+	<select name="rating">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3" selected="selected">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+	</select>
+	</p>
+	<input type="submit" value="Add Book and Review">
+</form>
+</div>
+</body>
+</html>
